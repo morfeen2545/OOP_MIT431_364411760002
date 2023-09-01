@@ -1,6 +1,7 @@
 class Vehicle:
     #class attribute
-    #my_vihecle = []
+    my_vehicle = []
+
     def __init__(self,brand,model,color,maxspeed,price):
         self.brand = brand
         self.model = model
@@ -11,12 +12,29 @@ class Vehicle:
 
 
         # difplay object attributes
-    def Vehicle_info(self):
-            print(f'brand:{self.brand} '
+
+    def vehicle_detail(self):
+        print(f'brand:{self.brand} '
                   f'model:{self.model} '
                   f'color:{self.color} '
-                  f'maxspeed:{self.maxspeed}'
-                  f' price:{self.price}')
+                  f'max speed:{self.maxspeed} '
+                  f'price:{self.price}')
+
+    def delete_vehicle(self,index):
+        self.my_vehicle.pop(index)
+
+    def edit_vehicle_price(self,index,new_price):
+        self.my_vehicle[index].price = new_price
+
+    def edit_vehicle_color(self,index,new_color):
+        self.my_vehicle[index].color = new_color
+
+
+
+
+
+
+
 # std = []
 # n = int(input('How attributes Vehicle?: '))
 # for i in range (n):
